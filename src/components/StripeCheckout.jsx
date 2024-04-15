@@ -13,9 +13,9 @@ import { useCartContext } from '../context/cart_context'
 import { formatPrice } from '../utils/helpers'
 import { useNavigate } from 'react-router-dom'
 
-const CustomInput = ({ type, placeholder, onChange, maxLength, handleOnInput, minLength, value }) => {
+const CustomInput = ({ type, name, placeholder, onChange, maxLength, handleOnInput, minLength, value }) => {
   return (
-    <input type={type} placeholder={placeholder} value={value} onChange={onChange} maxLength={maxLength} minLength={minLength} onInput={handleOnInput} />
+    <input type={type} name={name} placeholder={placeholder} value={value} onChange={onChange} maxLength={maxLength} minLength={minLength} onInput={handleOnInput} />
   )
 }
 
@@ -126,14 +126,14 @@ const CheckoutForm = () => {
       </article>
     )}
     <form id='payment-form' onSubmit={handleSubmit}>
-      <CustomInput type={'email'} placeholder={'Email'} value={email} onChange={onEmailChange} required />
-      <CustomInput type={'text'} placeholder={'First name'} value={firstName} onChange={onFirstNameChange} minLength={'2'} maxLength={'24'} required />
-      <CustomInput type={'text'} placeholder={'Last name'} value={lastName} onChange={onLastNameChange} minLength={'2'} maxLength={'24'} required />
-      <CustomInput type={'text'} placeholder={'Address'} value={address} onChange={onAddressChange} minLength={'2'} required />
-      <CustomInput type={'text'} placeholder={'Card number'} value={cardNumber} onChange={onCardNumberChange} maxLength={'23'} handleOnInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim() }} />
-      <CustomInput type={'text'} placeholder={'Expiry date (MM / YY)'} value={expDate} onChange={onExpDateChange} minLength={'7'} maxLength={'9'} required handleOnInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '').replace(/(\d{0,2})(\d{0,2})/, '$1 / $2').trim() }} />
-      <CustomInput type={'text'} placeholder={'Security code'} value={secCode} onChange={onSecCodeChange} minLength={'3'} maxLength={'4'} required handleOnInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '') }} />
-      <CustomInput type={'text'} placeholder={'Name on card'} value={cardName} onChange={onCardNameChange} minLength={'2'} maxLength={'64'} />
+      <CustomInput name={'email'} type={'email'} placeholder={'Email'} value={email} onChange={onEmailChange} required />
+      <CustomInput name={'firstname'} type={'text'} placeholder={'First name'} value={firstName} onChange={onFirstNameChange} minLength={'2'} maxLength={'24'} required />
+      <CustomInput name={'lastName'} type={'text'} placeholder={'Last name'} value={lastName} onChange={onLastNameChange} minLength={'2'} maxLength={'24'} required />
+      <CustomInput name={'address'} type={'text'} placeholder={'Address'} value={address} onChange={onAddressChange} minLength={'2'} required />
+      <CustomInput name={'cardNumber'} type={'text'} placeholder={'Card number'} value={cardNumber} onChange={onCardNumberChange} maxLength={'23'} handleOnInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim() }} />
+      <CustomInput name={'expiryDate'} type={'text'} placeholder={'Expiry date (MM / YY)'} value={expDate} onChange={onExpDateChange} minLength={'7'} maxLength={'9'} required handleOnInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '').replace(/(\d{0,2})(\d{0,2})/, '$1 / $2').trim() }} />
+      <CustomInput name={'securityCode'} type={'text'} placeholder={'Security code'} value={secCode} onChange={onSecCodeChange} minLength={'3'} maxLength={'4'} required handleOnInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '') }} />
+      <CustomInput name={'cardName'} type={'text'} placeholder={'Name on card'} value={cardName} onChange={onCardNameChange} minLength={'2'} maxLength={'64'} />
       <button
         // disabled={processing || disabled || succeeded} 
         id='submit'>
