@@ -1,5 +1,8 @@
 
-import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+import { GiBoltEye } from 'react-icons/gi'
+import { HiMiniRectangleGroup } from "react-icons/hi2";
+import { MdOutlineHistory } from "react-icons/md";
+
 export const links = [
   {
     id: 1,
@@ -26,21 +29,21 @@ export const links = [
 export const services = [
   {
     id: 1,
-    icon: GiCompass,
+    Icon: HiMiniRectangleGroup,
     title: 'mission',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'We are dedicated to curating a diverse selection of home furniture and artwork that reflects the unique tastes and lifestyles of our clientele.',
   },
   {
     id: 2,
-    icon: GiDiamondHard,
+    Icon: GiBoltEye,
     title: 'vision',
     text:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, ea. Perferendis corrupti reiciendis nesciunt rerum velit autem unde numquam nisi',
+      'We strive to create a sanctuary where every individual can find solace, inspiration, and joy amidst beautifully curated furniture and artwork.',
   },
   {
     id: 3,
-    icon: GiStabbedNote,
+    Icon: MdOutlineHistory,
     title: 'history',
     text:
       'What began as a small venture has now grown into a trusted online platform, serving customers across the world.',

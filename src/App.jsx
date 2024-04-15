@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar, Footer } from './components';
-import { Home, About, ProductsPage, Cart, CheckoutPage, ErrorPage, SingleProductPage } from './pages';
+import { Home, About, ProductsPage, Cart, CheckoutPage, ErrorPage, SingleProductPage, Promo } from './pages';
 
 function App() {
   return <>
@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/checkout" element={<CheckoutPage />} />
 
 
-        {/* <Route exact path="/checkout" element={<CheckoutPage />}/> */}
+        <Route exact path="/promo" element={<Promo />} />
 
         <Route path="*" element={<ErrorPage />} />
 

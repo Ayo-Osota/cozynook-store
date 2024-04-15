@@ -42,7 +42,7 @@ const Wrapper = styled.section`
   .submit-btn {
     font-size: 1rem;
     padding: 0.5rem 0.5rem;
-    border: 2px solid var(--clr-black);
+    border: 1px solid rgba(50, 50, 93, 0.1);
   }
   .form-input {
     border-right: none;
@@ -91,6 +91,10 @@ const Wrapper = styled.section`
   }
   @media (min-width: 1280px) {
     padding: 15rem 0;
+  }
+  .form-input:focus,
+  .submit-btn:focus {
+    outline: 1px solid var(--clr-cns-primary);
   }
 `
 

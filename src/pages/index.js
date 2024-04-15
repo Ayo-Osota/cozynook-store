@@ -7,6 +7,8 @@ import SingleProductPage from "./SingleProductPage";
 import CheckoutPage from "./CheckoutPage";
 import AuthWrapper from "./AuthWrapper";
 import PrivateRoute from "./PrivateRoute";
+import Promo from "./Promo";
+
 
 export {
     Home,
@@ -17,5 +19,6 @@ export {
     SingleProductPage,
     CheckoutPage,
     AuthWrapper,
-    PrivateRoute
+    PrivateRoute,
+    Promo,
 }

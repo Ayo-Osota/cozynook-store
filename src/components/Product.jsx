@@ -1,7 +1,6 @@
-
+import shopIcon from '../assets/Asset2.png'
 import styled from 'styled-components'
 import { formatPrice } from '../utils/helpers'
-import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Product = ({ id, price, name, image }) => {
@@ -9,7 +8,9 @@ const Product = ({ id, price, name, image }) => {
     <Wrapper className=''>
       <div className="container">
         <img src={image} alt={name} />
-        <Link to={`/products/${id}`} className='link'><FaSearch /></Link>
+        <Link to={`/products/${id}`} className='link'>
+          <img src={shopIcon} alt="nice table" className='icon' />
+        </Link>
       </div>
       <footer className='product-footer'>
         <h5>{name}</h5>
@@ -76,6 +77,10 @@ overflow: hidden;
   footer p {
     color: var(--clr-primary-5);
     letter-spacing: var(--spacing);
+  }
+  .icon {
+    width: 50%;
+    object-fit: contain;
   }
 `
 export default Product

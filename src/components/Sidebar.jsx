@@ -1,12 +1,11 @@
 
-import logo from '../assets/logo.svg';
+import logo from '../assets/Asset3.png';
 import { Link } from 'react-router-dom';
 import { useProductsContext } from '../context/products_context';
 import { FaTimes } from 'react-icons/fa';
 import { links } from '../utils/constants';
 import styled from 'styled-components';
 import CartButtons from './CartButtons';
-import { useUserContext } from '../context/user_context';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useProductsContext();
@@ -65,7 +64,7 @@ const SidebarContainer = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
-    color: var(--clr-grey-1);
+    color: var(--clr-cns-secondary);
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
@@ -73,7 +72,7 @@ const SidebarContainer = styled.div`
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
-    background: var(--clr-grey-10);
+    background: var(--clr-grey-5);
     color: var(--clr-grey-2);
   }
 
@@ -83,7 +82,7 @@ const SidebarContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--clr-white);
+    background: var(--clr-black);
     transition: var(--transition);
     transform: translate(-100%);
     z-index: -1;
