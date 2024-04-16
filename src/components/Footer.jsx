@@ -1,7 +1,7 @@
 import logo from '../assets/Asset1.png'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   return <Wrapper>
@@ -9,9 +9,12 @@ const Footer = () => {
       <Link to="/">
         <img src={logo} alt="cozynook store" />
       </Link>
-      <p>address, N0 34, Farunwi str address, N0 34, Farunwi str address, N0 34, Farunwi str</p>
+      <p>3510 Wilmette Ave, Wilmette Illinois 60091” “ 5000 S Central Ave, Chicago, Illinois 60638</p>
       <div className='icon-wrapper'>
         <a className='icon btn' href="/">
+          <FaPhoneAlt />
+
+        </a> <a className='icon btn' href="/">
           <FaInstagram />
 
         </a>
@@ -19,6 +22,7 @@ const Footer = () => {
           <FaTiktok />
 
         </a>
+
       </div>
     </div>
     <h5>

@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 import logo from '../assets/Asset3.png'
 import { FaBars } from 'react-icons/fa'
@@ -41,6 +40,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(31, 65, 125, 0.8);
 
   .nav-center {
     width: 90vw;

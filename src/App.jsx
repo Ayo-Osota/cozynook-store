@@ -1,10 +1,20 @@
+import { useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar, Footer } from './components';
 import { Home, About, ProductsPage, Cart, CheckoutPage, ErrorPage, SingleProductPage, Promo } from './pages';
+import PromoModal from './components/PromoModal';
 
 function App() {
+
+  const [isPromoModalOpen, setIsPromoModalOpen] = useState(true);
+
+  const closePromoModal = () => {
+    setIsPromoModalOpen(false)
+  }
+
   return <>
     <Router>
+      {isPromoModalOpen && <PromoModal closeModal={closePromoModal} />}
       <Navbar />
       <Sidebar />
       <Routes>

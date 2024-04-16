@@ -75,7 +75,7 @@ overflow: hidden;
   }
 
   footer p {
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-1);
     letter-spacing: var(--spacing);
   }
   .icon {
