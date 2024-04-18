@@ -1,7 +1,8 @@
 import logo from '../assets/Asset1.png'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { FaInstagram, FaTiktok, FaPhoneAlt } from "react-icons/fa";
+import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
+import { RiCustomerService2Line } from "react-icons/ri";
 
 const Footer = () => {
   return <Wrapper>
@@ -11,17 +12,18 @@ const Footer = () => {
       </Link>
       <p>3510 Wilmette Ave, Wilmette Illinois 60091” “ 5000 S Central Ave, Chicago, Illinois 60638</p>
       <div className='icon-wrapper'>
-        <a className='icon btn' href="/">
+        <a className='icon btn' href="tel:4063102230">
           <FaPhoneAlt />
-
-        </a> <a className='icon btn' href="/">
+        </a>
+        <a className='icon btn' href="tel:8507336721">
+          <RiCustomerService2Line />
+        </a>
+        <a className='icon btn' target='_blank' href="https://www.instagram.com/cozynookfurniture/">
           <FaInstagram />
-
         </a>
-        <a className='icon btn' href="/">
+        {/* <a className='icon btn' href="/">
           <FaTiktok />
-
-        </a>
+        </a> */}
 
       </div>
     </div>
